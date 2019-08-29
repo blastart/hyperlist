@@ -12,33 +12,13 @@ easy to understand and use.
 
 ![Demo](/example.gif?raw=true)
 
-- [Basic example](http://tbranyen.github.io/hyperlist/examples/basic.html)
-- [React integration](http://tbranyen.github.io/hyperlist/examples/react-example.html)
-- [Bind to input range](http://tbranyen.github.io/hyperlist/examples/bind-scroll-to-range.html)
-- [2 Million Rows](http://tbranyen.github.io/hyperlist/examples/2-million-rows.html)
-  - May take a minute to generate the data before anything shows up...
-- [Large Chat History](http://tbranyen.github.io/hyperlist/examples/large-chat-history.html)
-  - May take a minute to generate the data before anything shows up...
-
-## Installation
-
-```sh
-npm install hyperlist
-```
-
-Of course it can also just be added to any JavaScript project since it consists
-of a single JavaScript file.
-
-## Usage
-
-Below are full code examples containing typical usage. Documentation
-supplements the code comments so hopefully everything makes sense!
+See `examples` directory for more.
 
 #### Invocation
 
 How to invoke an instance of HyperList
 
-``` javascript
+```js
 // Using create
 const list = HyperList.create(document.body, requiredOptions);
 
@@ -51,7 +31,7 @@ const list = new HyperList(document.body, requiredOptions);
 These configuration options are not optional. So set them to avoid runtime
 errors. You can mutate them by setting a new object in the refresh method.
 
-``` javascript
+```js
 list.refresh(element, newConfig);
 ```
 
@@ -65,7 +45,7 @@ list.refresh(element, newConfig);
 
 A simple example with just the required options.
 
-``` javascript
+```js
 // Create a container element or find one that already exists in the DOM.
 const container = document.createElement('div');
 
@@ -142,7 +122,7 @@ You can also find a [working implementation in the examples directory](./example
 An example with all the options, mounted to the entire page that refreshes when
 the browser resizes.
 
-``` javascript
+```js
 // Create a container element or find one that already exists in the DOM.
 const container = document.createElement('div');
 
@@ -213,20 +193,3 @@ window.onresize = () => {
 // Attach the container to the DOM.
 document.body.appendChild(container);
 ```
-
-## Contributing
-
-PRs are welcome, please ensure the tests pass and the code looks like the
-surrounding style:
-
-``` sh
-npm test
-```
-
-## Credits
-
-This project is a fork of the existing (unmaintained) project:
-https://github.com/sergi/virtual-list
-
-This README section, the LICENSE, and package.json will remain to ensure
-proper credit is always extended.
